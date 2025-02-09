@@ -4,12 +4,7 @@ export const headerData = {
   links: [
     {
       text: 'Blog',
-      links: [
-        {
-          text: 'Blog List',
-          href: getBlogPermalink(),
-        },
-      ],
+      href: getBlogPermalink(),
     },
     {
       text: 'Contact',
