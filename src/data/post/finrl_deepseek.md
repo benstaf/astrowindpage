@@ -3,7 +3,7 @@ publishDate: 2025-02-10T00:00:00Z
 author: Mostapha Benhenda 
 title: FinRL-DeepSeek - new trading AI agents combining Reinforcement Learning with Large Language Models for Bear markets
 excerpt: In algorithmic trading, leveraging unstructured data, like financial news, and managing risk in bear market phases remain challenging.
-image: /images/bullbear.jpg
+image: https://substackcdn.com/image/fetch/f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F748431a1-8013-420e-ba61-76ab1cc030e3_1001x547.jpeg
 category: Articles 
 tags:
   - reinforcement learning 
@@ -34,7 +34,7 @@ The FinRL-DeepSeek framework introduces two novel components:
 2. **Risk-Sensitive RL Algorithm**:
    The **Conditional Value-at-Risk PPO (CPPO)** algorithm is modified to incorporate these LLM signals:
    - **Action Modulation**: Trading actions are scaled by recommendation scores. For instance, a "strong buy" (score 5) amplifies positive actions by 10%, while a "strong sell" dampens them by 10%.
-   - **Risk Modulation**: Aggregate risk scores (\(R_f\)) adjust portfolio returns in the CPPO objective, penalizing high-risk trajectories. This integration helps the agent avoid overexposure during market turbulence.
+   - **Risk Modulation**: Aggregate risk scores adjust rewards in the CPPO objective, penalizing high-risk trajectories.
 
 ---
 
@@ -47,10 +47,10 @@ The FinRL-DeepSeek framework introduces two novel components:
 
 ## Results: Beating the Nasdaq Benchmark
 
-![](/images/bullbear.jpg)
+![](https://substackcdn.com/image/fetch/f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F748431a1-8013-420e-ba61-76ab1cc030e3_1001x547.jpeg)
 
 
-![](/images/bullbear2.jpg)
+![](https://substackcdn.com/image/fetch/f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fdb489007-43c4-42f3-b40a-1835396c5694_1010x547.jpeg)
 
 
 - **Risk Adaptation**: CPPO-DeepSeek excelled in bear periods, while standard PPO thrived in bull markets. This duality highlights the framework’s ability to adapt to shifting market conditions.
