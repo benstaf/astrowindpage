@@ -3,7 +3,7 @@ publishDate: 2025-02-10T00:00:00Z
 author: Mostapha Benhenda 
 title: FinRL-DeepSeek - new trading AI agents combining Reinforcement Learning with Large Language Models
 excerpt: In algorithmic trading, leveraging unstructured data, like financial news, and managing risk in bear market phases remain challenging.
-image: https://images.unsplash.com/photo-1516996087931-5ae405802f9f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80
+image: /images/bullbear.jpg
 category: Articles 
 tags:
   - reinforcement learning 
