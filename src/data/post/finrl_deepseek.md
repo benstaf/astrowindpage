@@ -15,6 +15,9 @@ metadata:
 
 The world of financial markets is increasingly driven by algorithmic trading, but leveraging unstructured data like financial news and managing risk in bear market phases remain challenging. Our new family of trading agents, **FinRL-DeepSeek**, address these issues by fusing large language models (LLMs) with risk-sensitive reinforcement learning (RL). Let’s dive into how this hybrid approach works and why it matters.
 
+
+**Code, Data and AI agents**: Available on [GitHub](https://github.com/benstaf/FinRL_DeepSeek).
+
 ---
 
 ## Current Limitations of Reinforcement Learning in Trading
@@ -61,6 +64,3 @@ The FinRL-DeepSeek framework introduces two novel components:
 
 FinRL-DeepSeek demonstrates that LLMs can do more than sentiment analysis. For quant firms and investors, this approach offers a blueprint for building AI agents that are both data-savvy and risk-aware. As LLMs adoption grows, such hybrid RL-LLM approaches could transform how we navigate financial markets, with many variants remaining to be explored.
 
-**Code and Data**: Available on [GitHub](https://github.com/benstaf/FinRL_DeepSeek).
-
----
