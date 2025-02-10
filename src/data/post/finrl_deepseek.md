@@ -10,14 +10,14 @@ tags:
   - large language models
   - algorithmic trading 
 metadata:
-  canonical: https://astrowind.vercel.app/get-started-website-with-astro-tailwind-css
+  canonical: https://astrowind.vercel.app/finrl_deepseek
 ---
 
 The world of financial markets is increasingly driven by algorithmic trading, but leveraging unstructured data like financial news and managing risk in bear market phases remain challenging. Our new family of trading agents, **FinRL-DeepSeek**, address these issues by fusing large language models (LLMs) with risk-sensitive reinforcement learning (RL). Let’s dive into how this hybrid approach works and why it matters.
 
 ---
 
-## The Problem: Limitations of Current RL in Trading
+## Current Limitations of Reinforcement Learning in Trading
 
 Most RL-based trading agents focus on price data alone, ignoring alternative signals like news articles. They also struggle with risk management, often failing to mitigate losses during market downturns. Traditional RL algorithms like Proximal Policy Optimization (PPO) prioritize maximizing returns but lack mechanisms to penalize high-risk strategies. This can lead to catastrophic losses in unpredictable markets.
 
@@ -46,6 +46,11 @@ The FinRL-DeepSeek framework introduces two novel components:
 ---
 
 ## Results: Beating the Nasdaq Benchmark
+
+![](/images/bullbear.jpg)
+
+
+![](/images/bullbear2.jpg)
 
 
 - **Risk Adaptation**: CPPO-DeepSeek excelled in bear periods, while standard PPO thrived in bull markets. This duality highlights the framework’s ability to adapt to shifting market conditions.
