@@ -1,6 +1,6 @@
 site:
   name: Melwy
-  site: 'https://astrowind.vercel.app'
+  site: 'https://melwy.com'
   base: '/'
   trailingSlash: false
 
@@ -9,9 +9,9 @@ site:
 # Default SEO metadata
 metadata:
   title:
-    default: AstroWind
+    default: Melwy
     template: '%s — AstroWind'
-  description: "\U0001F680 Suitable for Startups, Small Business, Sass Websites, Professional Portfolios, Marketing Websites, Landing Pages & Blogs."
+  description: "Advancing open AI with open source, open science, and open applications."
   robots:
     index: true
     follow: true
