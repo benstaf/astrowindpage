@@ -1,8 +1,3 @@
----
-title: "Webinar Registration"
-layout: "default"
----
-
 <style>
   .hero-image {
     width: 100%;
@@ -22,7 +17,13 @@ layout: "default"
   }
 </style>
 
-<img src="https://raw.githubusercontent.com/benstaf/astrowindpage/refs/heads/main/public/images/finrldeepseek.jpg" alt="Webinar Hero" class="hero-image">
+<!-- Updated image URL and added alt text fallback -->
+<div class="hero-image-container">
+  <img src="/images/finrldeepseek.jpg" 
+       alt="Webinar Hero" 
+       class="hero-image"
+       onerror="this.onerror=null; this.src='https://example.com/fallback-image.jpg'">
+</div>
 
 <div class="form-container">
   <iframe src="https://forms.office.com/r/dR0yx6ATWU" allowfullscreen></iframe>
