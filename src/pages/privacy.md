@@ -1,7 +1,7 @@
 
 ---
-layout: ../layouts/Layout.astro
 title: Privacy Policy
+layout: ../layouts/Layout.astro
 ---
 
 # Privacy Policy
