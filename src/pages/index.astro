@@ -1,0 +1,40 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import BlogLatestPosts from '~/components/widgets/BlogLatestPosts.astro';
+
+const metadata = {
+  title: 'Melwy',
+  ignoreTitleTemplate: true,
+};
+---
+
+<Layout metadata={metadata}>
+  <!-- Hero Widget ******************* -->
+  <Hero
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Join',
+        href: 'https://forms.gle/zeva2efiZ2oSj6SG7',
+        target: '_blank',
+        icon: 'tabler:users',
+      },
+    ]}
+    image={{ src: '~/assets/images/removebggpu.png', alt: 'Open AI Lab' }}
+  >
+    <Fragment slot="title">
+      LLMs for Backtesting 
+    </Fragment>
+
+    <Fragment slot="subtitle">
+      We’re launching <span class="font-semibold">Point-In-Time-GPT</span>, a family of Large Language Models built specifically for <span class="font-semibold">point-in-time data</span> to enable backtesting <span class="font-semibold">without look-ahead bias. </span>
+    </Fragment>
+  </Hero>
+
+  <!-- Blog Section ****************** -->
+  <BlogLatestPosts
+    title="Latest from our Blog"
+    information="Explore insights, research, and updates from Melwy."
+  />
+</Layout>
