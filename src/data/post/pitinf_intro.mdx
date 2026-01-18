@@ -1,0 +1,66 @@
+---
+publishDate: 2026-01-18T00:00:00Z
+title: Introducing Pitinf Models
+excerpt: Pitinf is a new family of point-in-time large language models built for quantitative finance, designed to eliminate look-ahead bias and deliver realistic backtest and live-trading performance.
+image: https://cdn.corporatefinanceinstitute.com/assets/look-ahead-bias.png
+category: Announcements
+tags:
+  - Pitinf
+  - Point-in-Time
+  - Finance
+  - LLM
+  - Quantitative Trading
+  - Lookahead Bias
+metadata:
+  canonical: https://pit-inference.com/blog/introducing-pitinf
+---
+
+## The Look-Ahead Bias Problem
+
+Large Language Models are increasingly used by quants for research, signal generation, and portfolio construction. However, most general-purpose LLMs suffer from a critical flaw in financial settings: **look-ahead bias**.
+
+Because they are trained on web-scale corpora that include post-hoc market commentary, earnings reports, and retrospective analyses, standard LLMs often *implicitly know the future*. This leads to artificially inflated backtest results that collapse once the model is deployed on genuinely unseen data.
+
+In finance, this problem is especially severe. Temporal causality matters. A model that “knows” NVIDIA surged in 2023 is not predicting — it is recalling. As a result, impressive historical performance often evaporates the moment the evaluation window moves past the model’s training cutoff.
+
+## Pitinf: Point-in-Time LLMs for Finance
+
+**Pitinf models** are purpose-built to solve this problem.
+
+Pitinf is a family of **Point-in-Time (PiT) Large Language Models**, trained and aligned to strictly respect temporal cutoffs. Each model only has access to information that would have been available at a specific point in time, eliminating future data leakage by design.
+
+This makes Pitinf models fundamentally different from standard foundation models:
+
+- No memorized future prices or events  
+- No hidden contamination from post-cutoff data  
+- No inflated backtests that fail in live conditions  
+
+The Pitinf family is available in three sizes to match different production needs:
+
+- **Pitinf-Small (<10B parameters):** low-latency inference for real-time workflows  
+- **Pitinf-Medium (<100B parameters):** strong reasoning for research and systematic strategies  
+- **Pitinf-Large (>500B parameters):** frontier-grade reasoning for complex, multi-agent trading systems  
+
+## Proven Performance Without Alpha Decay
+
+To evaluate temporal robustness, we introduced **Look-Ahead-Bench**, a standardized benchmark that measures how model performance changes between in-sample and out-of-sample periods using **alpha decay**.
+
+The results reveal a clear pattern:
+
+- **Standard LLMs** achieve high in-sample returns but suffer severe performance collapse when moved to post-cutoff periods.
+- **Pitinf models** maintain stable performance across market regimes, showing little to no alpha decay.
+
+This leads to what we call the **Scaling Paradox**:
+
+- For standard LLMs, larger models perform *worse* out of sample due to stronger memorized priors.
+- For Pitinf models, scaling *improves* performance, because additional capacity enhances reasoning rather than memorization.
+
+In practice, this means Pitinf-Large behaves like a true reasoning engine — not a historical lookup table.
+
+## Built for Real-World Deployment
+
+Pitinf models are designed for quants who care about **deployable performance**, not leaderboard metrics. They integrate naturally into agentic trading systems, research pipelines, and backtesting frameworks where temporal integrity is non-negotiable.
+
+If you are building trading agents, running systematic strategies, or evaluating LLMs for financial decision-making, Pitinf models give you something rare: **results you can trust out of sample**.
+
+👉 Learn more and get access at **PiT-Inference**.
