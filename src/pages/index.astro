@@ -1,20 +1,24 @@
 ---
 import Layout from '~/layouts/Layout.astro';
+import Contact from '~/components/widgets/Contact.astro';
 
 import Hero from '~/components/widgets/Hero.astro';
-import Features from '~/components/widgets/Features.astro';
 import Stats from '~/components/widgets/Stats.astro';
+import Features from '~/components/widgets/Features.astro';
 import Steps from '~/components/widgets/Steps.astro';
+import BlogLatest from '~/components/widgets/BlogLatest.astro';
 import CallToAction from '~/components/widgets/CallToAction.astro';
 ---
 
 <Layout
   title="PiT-Inference — Point-in-Time LLMs for Financial Backtesting"
-  description="Point-in-Time LLMs eliminate look-ahead bias in financial backtesting and agentic trading systems."
+  description="Point-in-Time LLMs empirically shown to eliminate look-ahead bias in financial backtesting and agentic trading."
 >
   <Hero />
   <Stats />
   <Features />
   <Steps />
+  <BlogLatest />
+<Contact />
   <CallToAction />
 </Layout>
