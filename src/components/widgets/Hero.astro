@@ -1,7 +1,3 @@
----
-import CTA from '~/components/common/CTA.astro';
----
-
 <section class="relative overflow-hidden py-24">
   <div class="mx-auto max-w-7xl px-6 text-center">
     <h1 class="text-5xl font-bold tracking-tight sm:text-6xl">
@@ -16,16 +12,19 @@ import CTA from '~/components/common/CTA.astro';
     </p>
 
     <div class="mt-10 flex justify-center gap-4">
-      <CTA
-        text="Read the Look-Ahead-Bench paper"
+      <a
         href="https://github.com/benstaf/lookaheadbench"
-        variant="primary"
-      />
-      <CTA
-        text="View benchmark code"
+        class="rounded-lg bg-black px-6 py-3 text-white font-semibold hover:bg-gray-800"
+      >
+        Read the Look-Ahead-Bench paper
+      </a>
+
+      <a
         href="https://github.com/benstaf/lookaheadbench"
-        variant="secondary"
-      />
+        class="rounded-lg border border-gray-300 px-6 py-3 font-semibold text-gray-800 hover:bg-gray-100"
+      >
+        View benchmark code
+      </a>
     </div>
   </div>
 </section>
