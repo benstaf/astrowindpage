@@ -1,36 +1,36 @@
 ---
-import WidgetWrapper from '~/components/ui/WidgetWrapper.astro';
-import ItemGrid from '~/components/ui/ItemGrid.astro';
-import Headline from '~/components/ui/Headline.astro';
-import type { Features as Props } from '~/types';
-
-const {
-  title = await Astro.slots.render('title'),
-  subtitle = await Astro.slots.render('subtitle'),
-  tagline = await Astro.slots.render('tagline'),
-  items = [],
-  columns = 2,
-
-  defaultIcon,
-
-  id,
-  isDark = false,
-  classes = {},
-  bg = await Astro.slots.render('bg'),
-} = Astro.props;
+const features = [
+  {
+    title: 'Look-ahead bias is everywhere',
+    description:
+      'Standard LLMs memorize post-hoc market outcomes from their training data, leading to inflated backtests that collapse in live settings.'
+  },
+  {
+    title: 'Scaling makes it worse',
+    description:
+      'Larger foundation models develop stronger false priors, causing severe alpha decay once the knowledge cutoff is exceeded.'
+  },
+  {
+    title: 'Backtests must survive the future',
+    description:
+      'If performance disappears outside the training window, the model is not predictive — it is recalling.'
+  }
+];
 ---
 
-<WidgetWrapper id={id} isDark={isDark} containerClass={`max-w-5xl ${classes?.container ?? ''}`} bg={bg}>
-  <Headline title={title} subtitle={subtitle} tagline={tagline} classes={classes?.headline as Record<string, string>} />
-  <ItemGrid
-    items={items}
-    columns={columns}
-    defaultIcon={defaultIcon}
-    classes={{
-      container: '',
-      title: 'md:text-[1.3rem]',
-      icon: 'text-white bg-primary rounded-full w-10 h-10 p-2 md:w-12 md:h-12 md:p-3 mr-4 rtl:ml-4 rtl:mr-0',
-      ...((classes?.items as Record<string, never>) ?? {}),
-    }}
-  />
-</WidgetWrapper>
+<section class="py-24">
+  <div class="mx-auto max-w-7xl px-6">
+    <h2 class="text-4xl font-bold text-center">
+      Why most LLM backtests fail in production
+    </h2>
+
+    <div class="mt-16 grid gap-12 sm:grid-cols-3">
+      {features.map(feature => (
+        <div>
+          <h3 class="text-xl font-semibold">{feature.title}</h3>
+          <p class="mt-4 text-gray-600">{feature.description}</p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
